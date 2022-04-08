@@ -16,7 +16,8 @@ struct ContentView: View {
     }
     
     // To store rate data, this goes to VM if using MVVM
-    @State private var steps: [Step] = [Step]()
+//    @State private var steps: [Step] = [Step]()
+    @State private var counts: [RespiratoryRate] = [RespiratoryRate]()
     
     
     private func updateUIFromStatistics(_ statisticsCollection: HKStatisticsCollection) {
@@ -27,18 +28,19 @@ struct ContentView: View {
         statisticsCollection.enumerateStatistics(from: startDate, to: endDate) { (statistics, stop) in
 
             let count = statistics.sumQuantity()?.doubleValue(for: .count())
-            let step = Step(count: Int(count ?? 0), date: statistics.startDate)
-            steps.append(step)
+            let respiratery = RespiratoryRate(count: Int(count ?? 0), date: statistics.startDate)
+            counts.append(respiratery)
 
         }
         
 
+        print(counts)
     }
     
     var body: some View {
-        List(steps, id: \.id) { step in
-            Text("\(step.count)")
-            Text(step.date, style: .date)
+        List(counts, id: \.id) { i in
+            Text("\(i.count)")
+            Text(i.date, style: .date)
                 .opacity(0.5)
             
             
