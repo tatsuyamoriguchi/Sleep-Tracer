@@ -46,5 +46,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
+	<string>Your health record will be used to analyze your sleep condition.</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Your health record will be shared to analyze your sleep condition.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Your health record will be updated to analyze your sleep condition.</string>
 </dict>
 </plist>
