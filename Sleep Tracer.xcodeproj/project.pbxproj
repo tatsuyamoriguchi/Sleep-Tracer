@@ -14,6 +14,7 @@
 		8C30E93227FE73BB0050C677 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C30E93127FE73BB0050C677 /* HealthKit.framework */; };
 		8C54446927FF9BAF00C296D7 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54446827FF9BAF00C296D7 /* HealthStore.swift */; };
 		8C54446D27FFB4C300C296D7 /* RespirateryRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54446C27FFB4C300C296D7 /* RespirateryRate.swift */; };
+		8C54447127FFBD0E00C296D7 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54447027FFBD0E00C296D7 /* Step.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		8C30E93127FE73BB0050C677 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		8C54446827FF9BAF00C296D7 /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
 		8C54446C27FFB4C300C296D7 /* RespirateryRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespirateryRate.swift; sourceTree = "<group>"; };
+		8C54447027FFBD0E00C296D7 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				8C54446C27FFB4C300C296D7 /* RespirateryRate.swift */,
+				8C54447027FFBD0E00C296D7 /* Step.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			files = (
 				8C30E92227FE05A70050C677 /* ContentView.swift in Sources */,
 				8C54446927FF9BAF00C296D7 /* HealthStore.swift in Sources */,
+				8C54447127FFBD0E00C296D7 /* Step.swift in Sources */,
 				8C54446D27FFB4C300C296D7 /* RespirateryRate.swift in Sources */,
 				8C30E92027FE05A70050C677 /* Sleep_TracerApp.swift in Sources */,
 			);

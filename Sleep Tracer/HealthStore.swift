@@ -26,8 +26,8 @@ class HealthStore {
     
     // HKStatisticsCollection
     // Can store daily average rate and access to it
-    func calculateRespiratoryRate(completion: @escaping (HKStatisticsCollection?) -> Void) {
-        let respiratoryType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.respiratoryRate)!
+    func calculateStep(completion: @escaping (HKStatisticsCollection?) -> Void) {
+        let stepType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
         
         // Date to start Weekly respiratory data
         let startDate = Calendar.current.date(bySetting: .day, value: -7, of: Date())
@@ -37,7 +37,7 @@ class HealthStore {
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: Date(), options: .strictStartDate)
         
         // To perform query, get daily discreteMinimum respiratory data
-        query = HKStatisticsCollectionQuery(quantityType: respiratoryType, quantitySamplePredicate: predicate, options: .discreteMin, anchorDate: anchordate, intervalComponents: daily)
+        query = HKStatisticsCollectionQuery(quantityType: stepType, quantitySamplePredicate: predicate, options: .cumulativeSum, anchorDate: anchordate, intervalComponents: daily)
         
         // Create and fire a call back handler, initialResultsHandler everytime executinga query
         query!.initialResultsHandler = { query, HKStatisticsCollection, error in
@@ -55,14 +55,14 @@ class HealthStore {
     
     
     // Authorization Request
-    func requestAuthrization(completion: @escaping (Bool) -> Void) {
+    func requestAuthorization(completion: @escaping (Bool) -> Void) {
         
-        let repiratoryType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.respiratoryRate)!
+        let stepType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
         
         guard let healthStore = self.healthStore else { return completion(false) }
         
         // toShare to write data,
-        healthStore.requestAuthorization(toShare: [], read: [repiratoryType]) { (success, error) in
+        healthStore.requestAuthorization(toShare: [], read: [stepType]) { (success, error) in
             completion(success)
         }
         
