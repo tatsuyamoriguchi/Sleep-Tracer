@@ -27,7 +27,11 @@ struct ContentView: View {
         // .enumerationStatistics(from:, to:), .sources(), .statistics(), statistics(for: ).
         statisticsCollection.enumerateStatistics(from: startDate, to: endDate) { (statistics, stop) in
 
-            let count = statistics.sumQuantity()?.doubleValue(for: .count())
+            // Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'Attempt to convert incompatible units: count/s, count'
+            //let count = statistics.averageQuantity()?.doubleValue(for: .count())
+           let count = statistics.averageQuantity()?.doubleValue(for: HKUnit(from: "count/min"))
+            
+            // let value = quantity.doubleValue(for: HKUnit(from: "count/min"))
             let respiratery = RespiratoryRate(count: Int(count ?? 0), date: statistics.startDate)
             counts.append(respiratery)
 

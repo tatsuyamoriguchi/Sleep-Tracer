@@ -32,12 +32,12 @@ class HealthStore {
         // Date to start Weekly respiratory data
         let startDate = Calendar.current.date(bySetting: .day, value: -7, of: Date())
         let anchordate = Date.mondayAt12AM()
-        //let daily = DateComponents(day: 1)
-        let hourly = DateComponents(hour: 1)
+        let daily = DateComponents(day: 1)
+        //let hourly = DateComponents(hour: 1)
         
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: Date(), options: .strictStartDate)
         
-        query = HKStatisticsCollectionQuery(quantityType: quantityType, quantitySamplePredicate: predicate, options: .discreteAverage, anchorDate: anchordate, intervalComponents: hourly)
+        query = HKStatisticsCollectionQuery(quantityType: quantityType, quantitySamplePredicate: predicate, options: .discreteAverage, anchorDate: anchordate, intervalComponents: daily)
         
         // Create and fire a call back handler, initialResultsHandler everytime executinga query
         query!.initialResultsHandler = { query, HKStatisticsCollection, error in
