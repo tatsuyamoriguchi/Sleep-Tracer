@@ -18,7 +18,8 @@ SwiftUI
 
 HealthKit
 
-## Accessing HealthKit respiratory rate, and changes the font color depending on the respiratory rate ranges, 1-10 blue (possibility of sleep apnea) 10-19 normal, 20 or higher red (possibility of lung issue)
+## Screen shot on April 11, 2022
+Accessing HealthKit respiratory rate, and changes the font color depending on the respiratory rate ranges, 1-10 blue (possibility of sleep apnea) 10-19 normal, 20 or higher red (possibility of lung issue)
 
 
 
