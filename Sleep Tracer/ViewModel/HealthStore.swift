@@ -24,27 +24,29 @@ class HealthStore {
         }
     }
     
-    // HKStatisticsCollection
-    // Can store daily average rate and access to it
-    func calculateStep(completion: @escaping (HKStatisticsCollection?) -> Void) {
+    // HKStatisticsCollection: Can store daily average rate and access to it
+    func calculateRates(completion: @escaping (HKStatisticsCollection?) -> Void) {
+        
+        // HKSampleTypes to access multiple data taypes
+        
+        // Define what type of data you're collecting
         let quantityType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.respiratoryRate)!
         
         // Date to start Weekly respiratory data
-        let startDate = Calendar.current.date(bySetting: .day, value: -7, of: Date())
+        let startDate = Calendar.current.date(byAdding: .day, value: -7, to: Date())!
         let anchordate = Date.mondayAt12AM()
-        let daily = DateComponents(day: 1)
-        //let hourly = DateComponents(hour: 1)
+        let hourly = DateComponents(hour: 1)
         
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: Date(), options: .strictStartDate)
         
-        query = HKStatisticsCollectionQuery(quantityType: quantityType, quantitySamplePredicate: predicate, options: .discreteAverage, anchorDate: anchordate, intervalComponents: daily)
+        query = HKStatisticsCollectionQuery(quantityType: quantityType, quantitySamplePredicate: predicate, options:  .discreteAverage, anchorDate: anchordate, intervalComponents: hourly)
         
-        // Create and fire a call back handler, initialResultsHandler everytime executinga query
+        // Create and fire a call back handler, initialResultsHandler everytime executing a query
         query!.initialResultsHandler = { query, HKStatisticsCollection, error in
             completion(HKStatisticsCollection)
         }
         
-        // Execute the query
+        // Execute the query that you just created
         if let healthStore = healthStore, let query = self.query {
             healthStore.execute(query)
         }
@@ -61,7 +63,7 @@ class HealthStore {
         
         guard let healthStore = self.healthStore else { return completion(false) }
         
-        // toShare to write data,
+        // use "toShare:" to write data, but this app doesn't write data to HealthKit, so leave with an empty array, []
         healthStore.requestAuthorization(toShare: [], read: [quantityType]) { (success, error) in
             completion(success)
         }
@@ -78,4 +80,9 @@ extension Date {
     static func mondayAt12AM() -> Date {
         return Calendar(identifier: .iso8601).date(from: Calendar(identifier: .iso8601).dateComponents([.yearForWeekOfYear, .weekOfYear], from: Date()))!
     }
+    
+    func beginningOfDay() -> Date {
+            let beginningOfDay = Calendar.current.startOfDay(for: self)
+            return beginningOfDay
+        }
 }

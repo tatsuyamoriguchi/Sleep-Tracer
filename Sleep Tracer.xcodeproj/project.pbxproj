@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C2DE4D028010CC000718D02 /* HeartRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2DE4CF28010CC000718D02 /* HeartRate.swift */; };
 		8C30E92027FE05A70050C677 /* Sleep_TracerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E91F27FE05A70050C677 /* Sleep_TracerApp.swift */; };
 		8C30E92227FE05A70050C677 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E92127FE05A70050C677 /* ContentView.swift */; };
 		8C30E92427FE05A90050C677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C30E92327FE05A90050C677 /* Assets.xcassets */; };
@@ -15,11 +14,9 @@
 		8C30E93227FE73BB0050C677 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C30E93127FE73BB0050C677 /* HealthKit.framework */; };
 		8C54446927FF9BAF00C296D7 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54446827FF9BAF00C296D7 /* HealthStore.swift */; };
 		8C54446D27FFB4C300C296D7 /* RespirateryRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54446C27FFB4C300C296D7 /* RespirateryRate.swift */; };
-		8C54447127FFBD0E00C296D7 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54447027FFBD0E00C296D7 /* Step.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8C2DE4CF28010CC000718D02 /* HeartRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRate.swift; sourceTree = "<group>"; };
 		8C30E91C27FE05A70050C677 /* Sleep Tracer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sleep Tracer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C30E91F27FE05A70050C677 /* Sleep_TracerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sleep_TracerApp.swift; sourceTree = "<group>"; };
 		8C30E92127FE05A70050C677 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -30,7 +27,6 @@
 		8C30E93127FE73BB0050C677 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		8C54446827FF9BAF00C296D7 /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
 		8C54446C27FFB4C300C296D7 /* RespirateryRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespirateryRate.swift; sourceTree = "<group>"; };
-		8C54447027FFBD0E00C296D7 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +41,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C2CC83028053A2B00B39D7A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C30E92127FE05A70050C677 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C2CC83128053A3200B39D7A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8C54446827FF9BAF00C296D7 /* HealthStore.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		8C30E91327FE05A70050C677 = {
 			isa = PBXGroup;
 			children = (
@@ -65,14 +77,14 @@
 		8C30E91E27FE05A70050C677 /* Sleep Tracer */ = {
 			isa = PBXGroup;
 			children = (
+				8C2CC83128053A3200B39D7A /* ViewModel */,
+				8C2CC83028053A2B00B39D7A /* View */,
 				8C54446B27FFB49B00C296D7 /* Model */,
 				8C30E92F27FE73BB0050C677 /* Sleep Tracer.entitlements */,
 				8C30E91F27FE05A70050C677 /* Sleep_TracerApp.swift */,
-				8C30E92127FE05A70050C677 /* ContentView.swift */,
 				8C30E92327FE05A90050C677 /* Assets.xcassets */,
 				8C30E92827FE05A90050C677 /* Info.plist */,
 				8C30E92527FE05A90050C677 /* Preview Content */,
-				8C54446827FF9BAF00C296D7 /* HealthStore.swift */,
 			);
 			path = "Sleep Tracer";
 			sourceTree = "<group>";
@@ -97,8 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				8C54446C27FFB4C300C296D7 /* RespirateryRate.swift */,
-				8C54447027FFBD0E00C296D7 /* Step.swift */,
-				8C2DE4CF28010CC000718D02 /* HeartRate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,9 +184,7 @@
 			files = (
 				8C30E92227FE05A70050C677 /* ContentView.swift in Sources */,
 				8C54446927FF9BAF00C296D7 /* HealthStore.swift in Sources */,
-				8C54447127FFBD0E00C296D7 /* Step.swift in Sources */,
 				8C54446D27FFB4C300C296D7 /* RespirateryRate.swift in Sources */,
-				8C2DE4D028010CC000718D02 /* HeartRate.swift in Sources */,
 				8C30E92027FE05A70050C677 /* Sleep_TracerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
