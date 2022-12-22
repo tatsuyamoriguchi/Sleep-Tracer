@@ -14,9 +14,20 @@ Swift ver 5
 
 ## iOS Framework:
 
+iOS
+Combine
+MVVM
 SwiftUI
-
 HealthKit
+watchOS
+watchKit
+Core Motion
+Core Bluetooth
+CloudKit/Firebase
+REST API/GraphQL
+Core Location
+MapKit
+Core Data
 
 ## Screen shot on April 11, 2022
 Accessing HealthKit respiratory rate, and changes the font color depending on the respiratory rate ranges, 1-10 blue (possibility of sleep apnea) 10-19 normal, 20 or higher red (possibility of lung issue)
