@@ -15,18 +15,31 @@ Swift ver 5
 ## iOS Framework:
 
 iOS
+
 Combine
+
 MVVM
+
 SwiftUI
+
 HealthKit
+
 watchOS
+
 watchKit
+
 Core Motion
+
 Core Bluetooth
+
 CloudKit/Firebase
+
 REST API/GraphQL
+
 Core Location
+
 MapKit
+
 Core Data
 
 ## Screen shot on April 11, 2022
