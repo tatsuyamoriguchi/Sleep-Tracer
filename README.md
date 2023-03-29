@@ -1,6 +1,6 @@
 # Sleep-Tracer
 An iOS app that analyzes user's Respiratory HealthKit data to detect the possibility of sleeping disorder, and recommend clinics nearby.
-For product requirements, software architecture, development plan, QA test plan, etc., access to [Sleep Tracer Wiki](https://github.com/tatsuyamoriguchi/Sleep-Tracer/wiki).
+For product requirements, software architecture, development plan, QA test plan, etc., access to ❕❕ [Sleep Tracer Wiki](https://github.com/tatsuyamoriguchi/Sleep-Tracer/wiki)❕❕.
 
 ## Environment:
 
