@@ -2,6 +2,13 @@
 An iOS app that analyzes user's Respiratory HealthKit data to detect the possibility of sleeping disorder, and recommend clinics nearby.
 For product requirements, software architecture, development plan, QA test plan, etc., access to ❕❕ [Sleep Tracer Wiki](https://github.com/tatsuyamoriguchi/Sleep-Tracer/wiki)❕❕.
 
+## Product Concept
+1. To provide a handy and easy to use tool to detect the possibility of a user’s sleep disorder symptom.
+2. To educate users about sleep apnea and other sleeping issues
+3. To give users health care options nearby for possible sleeping disorder and other symptoms
+4. To promote clinics and institutions with Sleep Tracer(Ad revenue)
+5. Implement Web 3.0 to give tokens to users who participated product trials. Give token asset value to their sleep data. Sleep assist or medical equipment manufacturers can purchase these sleep data by NFT. Sleep Tracer charges % of the transactions. This won’t reduce the manufacture’s trial budget. Trial users receive data compensation subtracted by Sleep Tracer fee(%).
+
 ## Environment:
 
 MacBook Pro mid-2012
