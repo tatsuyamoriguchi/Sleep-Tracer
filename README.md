@@ -2,6 +2,31 @@
 An iOS app that analyzes user's Respiratory HealthKit data to detect the possibility of sleeping disorder, and recommend clinics nearby.
 For product requirements, software architecture, development plan, QA test plan, etc., access to ❕❕ [Sleep Tracer Wiki](https://github.com/tatsuyamoriguchi/Sleep-Tracer/wiki)❕❕.
 
+
+# Welcome to the Sleep-Tracer wiki!
+Sleep Tracer is an iOS app that monitors your respiratory and heart rates along with other health and environment data, analyzes the possibility of sleeping disorder such as Sleep Apnea, and suggests to consult with nearby specialists.
+
+* Detect the possibility of a user’s sleep disorder symptom with Apple Watch pairing with iOS devices
+* Educates users about sleep apnea and other sleeping issues
+* Give users health care options nearby for possible sleeping disorder and other symptoms
+* Promote clinics, therapists, institutions, medication, and medical equipments
+* HealthKit, FHIR data access, watchOS, CloudKit or Firebase, Push Notificaiton, Core Locaiton, MapKit, Apple Maps Points of Interest or Google Map API to get nearby clinics, Core Bluetooth to connect with a thermometer and other deivices as options, Charts, Weather API, Core Data, etc.
+
+[1. Product Requirements](https://github.com/tatsuyamoriguchi/Sleep-Tracer/wiki/1.-Product-Requirements)
+
+[2. HealthKit and HIPAA Compliance](https://github.com/tatsuyamoriguchi/Sleep-Tracer/wiki/2.-HealthKit-and-HIPAA-Compliance)
+
+[3. UI Design Prototype](https://github.com/tatsuyamoriguchi/Sleep-Tracer/wiki/3.-UI-Design-Prototype)
+
+[4. Software Architecture, Modularization, Code Quality](https://github.com/tatsuyamoriguchi/Sleep-Tracer/wiki/4.-Software-Architecture,-Modularization,-Code-Quality)
+
+[5. iOS App Development Plan](https://github.com/tatsuyamoriguchi/Sleep-Tracer/wiki/5.-iOS-App-Development-Plan)
+
+[6. QA Test Plan](https://github.com/tatsuyamoriguchi/Sleep-Tracer/wiki/6.-QA-Test-Plan)
+
+
+
+
 ## Product Concept
 1. To provide a handy and easy to use tool to detect the possibility of a user’s sleep disorder symptom.
 2. To educate users about sleep apnea and other sleeping issues
