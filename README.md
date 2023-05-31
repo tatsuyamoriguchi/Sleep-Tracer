@@ -3,7 +3,7 @@ An iOS app that analyzes user's Respiratory HealthKit data to detect the possibi
 For product requirements, software architecture, development plan, QA test plan, etc., access to ❕❕ [Sleep Tracer Wiki](https://github.com/tatsuyamoriguchi/Sleep-Tracer/wiki)❕❕.
 
 
-# [Welcome to the Sleep-Tracer wiki](https://github.com/tatsuyamoriguchi/Sleep-Tracer/wiki)
+# [Welcome to the Sleep-Tracer](https://github.com/tatsuyamoriguchi/Sleep-Tracer/wiki)
 Sleep Tracer is an iOS app that monitors your respiratory and heart rates along with other health and environment data, analyzes the possibility of sleeping disorder such as Sleep Apnea, and suggests to consult with nearby specialists.
 
 * Detect the possibility of a user’s sleep disorder symptom with Apple Watch pairing with iOS devices
@@ -36,17 +36,17 @@ Sleep Tracer is an iOS app that monitors your respiratory and heart rates along 
 
 ## Environment:
 
-MacBook Pro mid-2012
+M1 MacBook Air 2021
 
-MacOS Catalina 10.15.7
+MacOS Ventura 13.0
 
-Xcode 12.4
+Xcode 14.3
 
 Swift ver 5
 
 ## iOS Framework:
 
-iOS
+iOS 15.0
 
 Combine
 
