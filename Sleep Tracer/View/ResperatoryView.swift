@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ResperatoryView.swift
 //  Sleep Tracer
 //
 //  Created by Tatsuya Moriguchi on 4/6/22.
@@ -8,7 +8,7 @@
 import SwiftUI
 import HealthKit
 
-struct ContentView: View {
+struct ResperatoryView: View {
     
     private var healthStore: HealthStore?
     init() {
@@ -91,7 +91,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Home()
         
     }
 }
