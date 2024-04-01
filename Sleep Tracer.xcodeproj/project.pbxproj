@@ -3,23 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8C30E92027FE05A70050C677 /* Sleep_TracerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E91F27FE05A70050C677 /* Sleep_TracerApp.swift */; };
-		8C30E92227FE05A70050C677 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E92127FE05A70050C677 /* ContentView.swift */; };
+		8C30E92227FE05A70050C677 /* ResperatoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E92127FE05A70050C677 /* ResperatoryView.swift */; };
 		8C30E92427FE05A90050C677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C30E92327FE05A90050C677 /* Assets.xcassets */; };
 		8C30E92727FE05A90050C677 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C30E92627FE05A90050C677 /* Preview Assets.xcassets */; };
 		8C30E93227FE73BB0050C677 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C30E93127FE73BB0050C677 /* HealthKit.framework */; };
 		8C54446927FF9BAF00C296D7 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54446827FF9BAF00C296D7 /* HealthStore.swift */; };
 		8C54446D27FFB4C300C296D7 /* RespirateryRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54446C27FFB4C300C296D7 /* RespirateryRate.swift */; };
+		8C5C1D2D2BB9DF50008DC1E8 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C1D2C2BB9DF50008DC1E8 /* Login.swift */; };
+		8C5C1D3A2BBA1A23008DC1E8 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C1D302BBA1A23008DC1E8 /* Inter-Medium.ttf */; };
+		8C5C1D3B2BBA1A23008DC1E8 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C1D312BBA1A23008DC1E8 /* Inter-Light.ttf */; };
+		8C5C1D3C2BBA1A23008DC1E8 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C1D322BBA1A23008DC1E8 /* Inter-Thin.ttf */; };
+		8C5C1D3D2BBA1A23008DC1E8 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C1D332BBA1A23008DC1E8 /* Inter-Bold.ttf */; };
+		8C5C1D3E2BBA1A23008DC1E8 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C1D342BBA1A23008DC1E8 /* Inter-Regular.ttf */; };
+		8C5C1D3F2BBA1A23008DC1E8 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C1D352BBA1A23008DC1E8 /* Inter-ExtraBold.ttf */; };
+		8C5C1D402BBA1A23008DC1E8 /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C1D362BBA1A23008DC1E8 /* Inter-ExtraLight.ttf */; };
+		8C5C1D412BBA1A23008DC1E8 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C1D372BBA1A23008DC1E8 /* Inter-Black.ttf */; };
+		8C5C1D422BBA1A23008DC1E8 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C1D382BBA1A23008DC1E8 /* Inter-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8C30E91C27FE05A70050C677 /* Sleep Tracer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sleep Tracer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C30E91F27FE05A70050C677 /* Sleep_TracerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sleep_TracerApp.swift; sourceTree = "<group>"; };
-		8C30E92127FE05A70050C677 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8C30E92127FE05A70050C677 /* ResperatoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResperatoryView.swift; sourceTree = "<group>"; };
 		8C30E92327FE05A90050C677 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C30E92627FE05A90050C677 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8C30E92827FE05A90050C677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,6 +37,16 @@
 		8C30E93127FE73BB0050C677 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		8C54446827FF9BAF00C296D7 /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
 		8C54446C27FFB4C300C296D7 /* RespirateryRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespirateryRate.swift; sourceTree = "<group>"; };
+		8C5C1D2C2BB9DF50008DC1E8 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		8C5C1D302BBA1A23008DC1E8 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		8C5C1D312BBA1A23008DC1E8 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
+		8C5C1D322BBA1A23008DC1E8 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
+		8C5C1D332BBA1A23008DC1E8 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		8C5C1D342BBA1A23008DC1E8 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		8C5C1D352BBA1A23008DC1E8 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		8C5C1D362BBA1A23008DC1E8 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
+		8C5C1D372BBA1A23008DC1E8 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		8C5C1D382BBA1A23008DC1E8 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +64,9 @@
 		8C2CC83028053A2B00B39D7A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8C30E92127FE05A70050C677 /* ContentView.swift */,
+				8C30E92127FE05A70050C677 /* ResperatoryView.swift */,
+				8C5C1D2C2BB9DF50008DC1E8 /* Login.swift */,
+				8C5C1D2F2BBA1A23008DC1E8 /* static */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,6 +135,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8C5C1D2F2BBA1A23008DC1E8 /* static */ = {
+			isa = PBXGroup;
+			children = (
+				8C5C1D302BBA1A23008DC1E8 /* Inter-Medium.ttf */,
+				8C5C1D312BBA1A23008DC1E8 /* Inter-Light.ttf */,
+				8C5C1D322BBA1A23008DC1E8 /* Inter-Thin.ttf */,
+				8C5C1D332BBA1A23008DC1E8 /* Inter-Bold.ttf */,
+				8C5C1D342BBA1A23008DC1E8 /* Inter-Regular.ttf */,
+				8C5C1D352BBA1A23008DC1E8 /* Inter-ExtraBold.ttf */,
+				8C5C1D362BBA1A23008DC1E8 /* Inter-ExtraLight.ttf */,
+				8C5C1D372BBA1A23008DC1E8 /* Inter-Black.ttf */,
+				8C5C1D382BBA1A23008DC1E8 /* Inter-SemiBold.ttf */,
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,8 +177,9 @@
 		8C30E91427FE05A70050C677 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					8C30E91B27FE05A70050C677 = {
 						CreatedOnToolsVersion = 12.4;
@@ -170,7 +209,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C5C1D422BBA1A23008DC1E8 /* Inter-SemiBold.ttf in Resources */,
+				8C5C1D3B2BBA1A23008DC1E8 /* Inter-Light.ttf in Resources */,
+				8C5C1D402BBA1A23008DC1E8 /* Inter-ExtraLight.ttf in Resources */,
+				8C5C1D3A2BBA1A23008DC1E8 /* Inter-Medium.ttf in Resources */,
+				8C5C1D3F2BBA1A23008DC1E8 /* Inter-ExtraBold.ttf in Resources */,
+				8C5C1D3C2BBA1A23008DC1E8 /* Inter-Thin.ttf in Resources */,
+				8C5C1D3D2BBA1A23008DC1E8 /* Inter-Bold.ttf in Resources */,
+				8C5C1D412BBA1A23008DC1E8 /* Inter-Black.ttf in Resources */,
 				8C30E92727FE05A90050C677 /* Preview Assets.xcassets in Resources */,
+				8C5C1D3E2BBA1A23008DC1E8 /* Inter-Regular.ttf in Resources */,
 				8C30E92427FE05A90050C677 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,7 +230,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C30E92227FE05A70050C677 /* ContentView.swift in Sources */,
+				8C30E92227FE05A70050C677 /* ResperatoryView.swift in Sources */,
+				8C5C1D2D2BB9DF50008DC1E8 /* Login.swift in Sources */,
 				8C54446927FF9BAF00C296D7 /* HealthStore.swift in Sources */,
 				8C54446D27FFB4C300C296D7 /* RespirateryRate.swift in Sources */,
 				8C30E92027FE05A70050C677 /* Sleep_TracerApp.swift in Sources */,
@@ -229,6 +278,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -290,6 +340,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -319,7 +370,7 @@
 				DEVELOPMENT_TEAM = GY7BG2G9TC;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Sleep Tracer/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,7 +393,7 @@
 				DEVELOPMENT_TEAM = GY7BG2G9TC;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Sleep Tracer/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

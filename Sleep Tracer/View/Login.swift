@@ -9,7 +9,23 @@ import SwiftUI
 
 struct Login: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            HStack {
+                Text("Sleep Tracer")
+                    .font(
+//                        .custom("AppleSDGothicNeo-Light", fixedSize: 64)
+                        .custom("ArialHebrew-Light", fixedSize: 64)
+//                        .weight(.bold)
+                    )
+                    .foregroundStyle(.cyan)
+                
+                Spacer()
+                Image("Sleep Tracer Icon")
+
+            }
+            Spacer()
+        }
+        .background(Color.black)
     }
 }
 

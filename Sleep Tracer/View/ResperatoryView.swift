@@ -34,7 +34,6 @@ struct ResperatoryView: View {
     }
     
     var body: some View {
-        
         NavigationView {
             List(counts, id: \.id) { i in
                 Text(i.date, style: .date)
@@ -54,11 +53,21 @@ struct ResperatoryView: View {
                 default:
                     Text("")
                 }
-                
             }
-            .navigationTitle("Respiratory Rates")
+            .toolbar {
+                ToolbarItem {
+                    Text("Respiratory Rates")        .font(.custom("AppleSDGothicNeo-Light", size: 34))
+                        .foregroundColor(.cyan)
+                }
+            }
+//            .navigationTitle("Respiratory Rates")
+
+            .toolbarBackground(.visible, for: .navigationBar)            // The color scheme will apply only when the background is shown.
+            .toolbarBackground(Color.black, for: .navigationBar) // Specify the color of the toolbar background.
+            .toolbarColorScheme(.dark, for: .navigationBar) // By specifying the corlor scheme to dark, the font color changes to white.
+            .scrollContentBackground(.hidden) // To change the List view background color, hide the scrollContentBackgroudn first.
+            .background(.black) // Then change the background color
         }
-        
     
         // Display Authorization Request
         .onAppear() {
@@ -84,14 +93,10 @@ struct ResperatoryView: View {
             }
         }
     }
-    
-
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        Home()
-        
+        ResperatoryView()
     }
 }
