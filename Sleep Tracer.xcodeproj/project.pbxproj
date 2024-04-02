@@ -15,15 +15,7 @@
 		8C54446927FF9BAF00C296D7 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54446827FF9BAF00C296D7 /* HealthStore.swift */; };
 		8C54446D27FFB4C300C296D7 /* RespirateryRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54446C27FFB4C300C296D7 /* RespirateryRate.swift */; };
 		8C5C1D2D2BB9DF50008DC1E8 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C1D2C2BB9DF50008DC1E8 /* Login.swift */; };
-		8C5C1D3A2BBA1A23008DC1E8 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C1D302BBA1A23008DC1E8 /* Inter-Medium.ttf */; };
-		8C5C1D3B2BBA1A23008DC1E8 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C1D312BBA1A23008DC1E8 /* Inter-Light.ttf */; };
-		8C5C1D3C2BBA1A23008DC1E8 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C1D322BBA1A23008DC1E8 /* Inter-Thin.ttf */; };
-		8C5C1D3D2BBA1A23008DC1E8 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C1D332BBA1A23008DC1E8 /* Inter-Bold.ttf */; };
-		8C5C1D3E2BBA1A23008DC1E8 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C1D342BBA1A23008DC1E8 /* Inter-Regular.ttf */; };
-		8C5C1D3F2BBA1A23008DC1E8 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C1D352BBA1A23008DC1E8 /* Inter-ExtraBold.ttf */; };
-		8C5C1D402BBA1A23008DC1E8 /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C1D362BBA1A23008DC1E8 /* Inter-ExtraLight.ttf */; };
-		8C5C1D412BBA1A23008DC1E8 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C1D372BBA1A23008DC1E8 /* Inter-Black.ttf */; };
-		8C5C1D422BBA1A23008DC1E8 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C5C1D382BBA1A23008DC1E8 /* Inter-SemiBold.ttf */; };
+		8CEDA4542BBB608E0035809F /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CEDA4532BBB608E0035809F /* Inter-ExtraLight.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,15 +30,7 @@
 		8C54446827FF9BAF00C296D7 /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
 		8C54446C27FFB4C300C296D7 /* RespirateryRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespirateryRate.swift; sourceTree = "<group>"; };
 		8C5C1D2C2BB9DF50008DC1E8 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		8C5C1D302BBA1A23008DC1E8 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
-		8C5C1D312BBA1A23008DC1E8 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
-		8C5C1D322BBA1A23008DC1E8 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
-		8C5C1D332BBA1A23008DC1E8 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
-		8C5C1D342BBA1A23008DC1E8 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
-		8C5C1D352BBA1A23008DC1E8 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
-		8C5C1D362BBA1A23008DC1E8 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
-		8C5C1D372BBA1A23008DC1E8 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
-		8C5C1D382BBA1A23008DC1E8 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		8CEDA4532BBB608E0035809F /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +50,6 @@
 			children = (
 				8C30E92127FE05A70050C677 /* ResperatoryView.swift */,
 				8C5C1D2C2BB9DF50008DC1E8 /* Login.swift */,
-				8C5C1D2F2BBA1A23008DC1E8 /* static */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -106,6 +89,7 @@
 				8C30E91F27FE05A70050C677 /* Sleep_TracerApp.swift */,
 				8C30E92327FE05A90050C677 /* Assets.xcassets */,
 				8C30E92827FE05A90050C677 /* Info.plist */,
+				8CEDA4532BBB608E0035809F /* Inter-ExtraLight.ttf */,
 				8C30E92527FE05A90050C677 /* Preview Content */,
 			);
 			path = "Sleep Tracer";
@@ -133,22 +117,6 @@
 				8C54446C27FFB4C300C296D7 /* RespirateryRate.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		8C5C1D2F2BBA1A23008DC1E8 /* static */ = {
-			isa = PBXGroup;
-			children = (
-				8C5C1D302BBA1A23008DC1E8 /* Inter-Medium.ttf */,
-				8C5C1D312BBA1A23008DC1E8 /* Inter-Light.ttf */,
-				8C5C1D322BBA1A23008DC1E8 /* Inter-Thin.ttf */,
-				8C5C1D332BBA1A23008DC1E8 /* Inter-Bold.ttf */,
-				8C5C1D342BBA1A23008DC1E8 /* Inter-Regular.ttf */,
-				8C5C1D352BBA1A23008DC1E8 /* Inter-ExtraBold.ttf */,
-				8C5C1D362BBA1A23008DC1E8 /* Inter-ExtraLight.ttf */,
-				8C5C1D372BBA1A23008DC1E8 /* Inter-Black.ttf */,
-				8C5C1D382BBA1A23008DC1E8 /* Inter-SemiBold.ttf */,
-			);
-			path = static;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,16 +177,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C5C1D422BBA1A23008DC1E8 /* Inter-SemiBold.ttf in Resources */,
-				8C5C1D3B2BBA1A23008DC1E8 /* Inter-Light.ttf in Resources */,
-				8C5C1D402BBA1A23008DC1E8 /* Inter-ExtraLight.ttf in Resources */,
-				8C5C1D3A2BBA1A23008DC1E8 /* Inter-Medium.ttf in Resources */,
-				8C5C1D3F2BBA1A23008DC1E8 /* Inter-ExtraBold.ttf in Resources */,
-				8C5C1D3C2BBA1A23008DC1E8 /* Inter-Thin.ttf in Resources */,
-				8C5C1D3D2BBA1A23008DC1E8 /* Inter-Bold.ttf in Resources */,
-				8C5C1D412BBA1A23008DC1E8 /* Inter-Black.ttf in Resources */,
 				8C30E92727FE05A90050C677 /* Preview Assets.xcassets in Resources */,
-				8C5C1D3E2BBA1A23008DC1E8 /* Inter-Regular.ttf in Resources */,
+				8CEDA4542BBB608E0035809F /* Inter-ExtraLight.ttf in Resources */,
 				8C30E92427FE05A90050C677 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

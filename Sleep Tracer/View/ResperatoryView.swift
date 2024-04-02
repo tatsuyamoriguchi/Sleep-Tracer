@@ -56,7 +56,8 @@ struct ResperatoryView: View {
             }
             .toolbar {
                 ToolbarItem {
-                    Text("Respiratory Rates")        .font(.custom("AppleSDGothicNeo-Light", size: 34))
+                    Text("Respiratory Rates")
+                        .font(.custom("Inter-ExtraLight", size: 34))
                         .foregroundColor(.cyan)
                 }
             }

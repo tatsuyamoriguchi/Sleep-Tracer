@@ -8,22 +8,52 @@
 import SwiftUI
 
 struct Login: View {
+    
+    @State private var username: String = ""
+    @State private var password: String = ""
+    @FocusState private var emailFieldIsFocused: Bool
+    
+    
     var body: some View {
         VStack{
             HStack {
-                Text("Sleep Tracer")
-                    .font(
-//                        .custom("AppleSDGothicNeo-Light", fixedSize: 64)
-                        .custom("ArialHebrew-Light", fixedSize: 64)
-//                        .weight(.bold)
-                    )
-                    .foregroundStyle(.cyan)
-                
+                Image("Sleep Tracer")
                 Spacer()
-                Image("Sleep Tracer Icon")
-
+                Image("Sleep Tracer Icon Transparent")
             }
+            
             Spacer()
+            TextField("User Name", text: $username)
+                .focused($emailFieldIsFocused)
+                .onSubmit {
+                    //                        validate(name: username)
+                }
+                .frame(minWidth: 250)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .fixedSize(horizontal: true, vertical: false)
+            
+                .textInputAutocapitalization(.never)
+                .disableAutocorrection(true)
+                .background(Color.white)
+            
+            SecureField("Enter a password", text: $password)
+                .disableAutocorrection(true)
+                .autocapitalization(.none)
+            
+                .frame(minWidth: 250)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .fixedSize(horizontal: true, vertical: false)
+            
+                .focused($emailFieldIsFocused)
+                .textInputAutocapitalization(.never)
+                .disableAutocorrection(true)
+                .background(Color.white)
+                .scrollContentBackground(.hidden)
+            
+            Spacer()
+            Spacer()
+            Spacer()
+            
         }
         .background(Color.black)
     }
