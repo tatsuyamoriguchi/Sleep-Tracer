@@ -21,7 +21,7 @@ struct Login: View {
                 Spacer()
                 Image("Sleep Tracer Icon Transparent")
             }
-            
+
             Spacer()
             TextField("User Name", text: $username)
                 .focused($emailFieldIsFocused)
