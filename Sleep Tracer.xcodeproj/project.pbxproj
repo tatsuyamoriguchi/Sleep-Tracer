@@ -15,6 +15,8 @@
 		8C54446927FF9BAF00C296D7 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54446827FF9BAF00C296D7 /* HealthStore.swift */; };
 		8C54446D27FFB4C300C296D7 /* RespirateryRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54446C27FFB4C300C296D7 /* RespirateryRate.swift */; };
 		8C5C1D2D2BB9DF50008DC1E8 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C1D2C2BB9DF50008DC1E8 /* Login.swift */; };
+		8CBF19FA2BBDECE4001BEBA0 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBF19F92BBDECE4001BEBA0 /* Home.swift */; };
+		8CDEB0E82BBF1A6F00820169 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDEB0E72BBF1A6F00820169 /* ContentView.swift */; };
 		8CEDA4542BBB608E0035809F /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CEDA4532BBB608E0035809F /* Inter-ExtraLight.ttf */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,8 @@
 		8C54446827FF9BAF00C296D7 /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
 		8C54446C27FFB4C300C296D7 /* RespirateryRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespirateryRate.swift; sourceTree = "<group>"; };
 		8C5C1D2C2BB9DF50008DC1E8 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		8CBF19F92BBDECE4001BEBA0 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		8CDEB0E72BBF1A6F00820169 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8CEDA4532BBB608E0035809F /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,6 +54,8 @@
 			children = (
 				8C30E92127FE05A70050C677 /* ResperatoryView.swift */,
 				8C5C1D2C2BB9DF50008DC1E8 /* Login.swift */,
+				8CBF19F92BBDECE4001BEBA0 /* Home.swift */,
+				8CDEB0E72BBF1A6F00820169 /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,8 +198,10 @@
 			files = (
 				8C30E92227FE05A70050C677 /* ResperatoryView.swift in Sources */,
 				8C5C1D2D2BB9DF50008DC1E8 /* Login.swift in Sources */,
+				8CDEB0E82BBF1A6F00820169 /* ContentView.swift in Sources */,
 				8C54446927FF9BAF00C296D7 /* HealthStore.swift in Sources */,
 				8C54446D27FFB4C300C296D7 /* RespirateryRate.swift in Sources */,
+				8CBF19FA2BBDECE4001BEBA0 /* Home.swift in Sources */,
 				8C30E92027FE05A70050C677 /* Sleep_TracerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

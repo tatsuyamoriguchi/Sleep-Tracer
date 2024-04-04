@@ -12,9 +12,9 @@ struct Login: View {
     @State private var username: String = ""
     @State private var password: String = ""
     @FocusState private var emailFieldIsFocused: Bool
-    
-    
+
     var body: some View {
+
         VStack{
             HStack {
                 Image("Sleep Tracer")
