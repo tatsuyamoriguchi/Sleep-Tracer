@@ -14,7 +14,7 @@ struct Sleep_TracerApp: App {
     var body: some Scene {
 
         // Temporal property to show Login() or ContentView()
-        var loggedIn: Bool = true
+        var loggedIn: Bool = false
         
         WindowGroup {
             Group {

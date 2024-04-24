@@ -9,9 +9,10 @@ import SwiftUI
 
 struct Login: View {
     
-    @State private var username: String = ""
+    @State private var useremail: String = ""
     @State private var password: String = ""
     @FocusState private var emailFieldIsFocused: Bool
+    @State private var isModal: Bool = false
 
     var body: some View {
 
@@ -23,36 +24,45 @@ struct Login: View {
             }
 
             Spacer()
-            TextField("User Name", text: $username)
+            
+            TextField("User Name", text: $useremail)
                 .focused($emailFieldIsFocused)
                 .onSubmit {
-                    //                        validate(name: username)
+                    //                        validate(email: useremail)
                 }
-                .frame(minWidth: 250)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .fixedSize(horizontal: true, vertical: false)
-            
-                .textInputAutocapitalization(.never)
-                .disableAutocorrection(true)
-                .background(Color.white)
+                .textFieldStyle()
             
             SecureField("Enter a password", text: $password)
                 .disableAutocorrection(true)
                 .autocapitalization(.none)
-            
-                .frame(minWidth: 250)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .fixedSize(horizontal: true, vertical: false)
-            
-                .focused($emailFieldIsFocused)
-                .textInputAutocapitalization(.never)
-                .disableAutocorrection(true)
-                .background(Color.white)
                 .scrollContentBackground(.hidden)
-            
+
+                .textFieldStyle()
+
+
             Spacer()
             Spacer()
             Spacer()
+            HStack {
+                Spacer()
+                Button("Login") {
+                    // Perform login action
+                    //                
+                } 
+                .foregroundStyle(Color("Button Color"))
+                
+                Spacer()
+                Button("Register") {
+                    // Navigate to Registration view
+                    self.isModal = true
+                }.sheet(isPresented: $isModal, content: {
+                    Registration()
+                })
+                .foregroundStyle(Color("Button Color"))
+                Spacer()
+            }
+
+
             
         }
         .background(Color.black)
