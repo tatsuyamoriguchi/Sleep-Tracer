@@ -13,10 +13,10 @@ struct Registration: View {
     @State private var confirmPassword = ""
     @FocusState private var emailFieldIsFocused: Bool
     
-    
+    @Environment(\.presentationMode) var presentationMode
+
     
     var body: some View {
-        @Environment(\.presentationMode) var presentationMode
 
         VStack{
             Spacer()
