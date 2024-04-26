@@ -9,13 +9,15 @@ import SwiftUI
 
 struct Login: View {
     
-    @State private var useremail: String = ""
+    @State private var email: String = ""
     @State private var password: String = ""
     @FocusState private var emailFieldIsFocused: Bool
     @State private var isModal: Bool = false
 
     var body: some View {
 
+        let authManager = AuthenticationManager.shared
+        
         VStack{
             HStack {
                 Image("Sleep Tracer")
@@ -25,7 +27,7 @@ struct Login: View {
 
             Spacer()
             
-            TextField("User Name", text: $useremail)
+            TextField("User Name", text: $email)
                 .focused($emailFieldIsFocused)
                 .onSubmit {
                     //                        validate(email: useremail)
@@ -47,8 +49,8 @@ struct Login: View {
                 Spacer()
                 Button("Login") {
                     // Perform login action
-                    //                
-                } 
+                    authManager.login(email: email, password: password)
+                }
                 .foregroundStyle(Color("Button Color"))
                 
                 Spacer()
