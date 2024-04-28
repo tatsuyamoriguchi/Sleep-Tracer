@@ -11,6 +11,7 @@ struct Registration: View {
     @State private var email = ""
     @State private var password = ""
     @State private var confirmPassword = ""
+    @State private var message = "Enter your email and password below."
     @FocusState private var emailFieldIsFocused: Bool
     
     @Environment(\.presentationMode) var presentationMode
@@ -25,7 +26,7 @@ struct Registration: View {
                     .font(.largeTitle)
             }
             Spacer()
-            
+            Text(message)
             Spacer()
             TextField("eMail Address", text: $email)
                 .focused($emailFieldIsFocused)
@@ -48,14 +49,19 @@ struct Registration: View {
             
             Button("Register") {
                 // Perform registration action
-                if AuthenticationManager.shared.register(email: email, password: password) == true {
+                if AuthenticationManager.shared.register(email: email, password: password, confirmPassword: confirmPassword) == true {
                     print("registration completed")
                     presentationMode.wrappedValue.dismiss()
                     
                 } else {
-                    print("Issue in AuthenticationManager.shared.register(email: email, password: password)")
+                    message = "Confirm Password doesn't match with Password. Try it again."
+                    email = ""
+                    password = ""
+                    confirmPassword = ""
+                    
+                    print("Issue in AuthenticationManager.shared.register(email: email, password: password, confirmPassword)")
+                    
                 }
-                
             }
             .foregroundStyle(Color("Button Color"))
         }

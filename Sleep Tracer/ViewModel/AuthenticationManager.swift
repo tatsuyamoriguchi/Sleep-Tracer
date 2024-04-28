@@ -15,9 +15,17 @@ class AuthenticationManager {
     
     private init() {}
     
-    func register(email: String, password: String) -> Bool {
+    func register(email: String, password: String, confirmPassword: String) -> Bool {
         // Perform registration logic
         // Call authentification service to register a user
+        if password != confirmPassword {
+            print("password doesn't match with confirmPassword.")
+            AuthenticationManager.isLoggedIn = false
+            return AuthenticationManager.isLoggedIn
+        }
+            
+        
+        
         do {
             try Keychain.save(email: email, password: password)
             AuthenticationManager.isLoggedIn = true
@@ -26,6 +34,7 @@ class AuthenticationManager {
             AuthenticationManager.isLoggedIn = false
             print("Error saving user credentials: \(error.localizedDescription)")
         }
+        print("Hello")
         return AuthenticationManager.isLoggedIn
     }
     
