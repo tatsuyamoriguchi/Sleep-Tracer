@@ -28,7 +28,7 @@ class AuthenticationManager {
         
         do {
             try Keychain.save(email: email, password: password)
-            AuthenticationManager.isLoggedIn = true
+//            AuthenticationManager.isLoggedIn = true
             print("User registred with email: \(email) and password: \(password)")
         } catch {
             AuthenticationManager.isLoggedIn = false
@@ -38,17 +38,15 @@ class AuthenticationManager {
         return AuthenticationManager.isLoggedIn
     }
     
-    func login(email: String, password: String) {
+    func login(email: String, password: String) -> Bool {
         // Perform login logic.
         // Call authentification service to login a user. Use DispatchQueue.main.sync { if calling external API
         if email == email, password == password {
-            // Save user credentials to Keychain
             do {
-                // nonono, retrieve it, not save it!!!
                 let retrievedPassword = try Keychain.shared.retrievePassword(forEmail: email)
-                
                 if retrievedPassword == password {
                     AuthenticationManager.isLoggedIn = true
+                    
                     print("isLoggedIn = \(AuthenticationManager.isLoggedIn)")
                     print("Passowrd matched")
                 } else {
@@ -57,13 +55,10 @@ class AuthenticationManager {
                     print("Password unmatched")
                 }
             } catch {
-                print("Unable to save credentials.")
+                print("Keychain.shared.retrievePassword(forEmail: email) returned an error.")
             }
-            
         }
-
-
-
+        return AuthenticationManager.isLoggedIn
     }
     
     func logout() {

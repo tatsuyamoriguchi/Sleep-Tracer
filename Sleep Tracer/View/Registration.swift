@@ -18,6 +18,8 @@ struct Registration: View {
 
     
     var body: some View {
+        
+        let authManager = AuthenticationManager.shared
 
         VStack{
             Spacer()
@@ -49,7 +51,7 @@ struct Registration: View {
             
             Button("Register") {
                 // Perform registration action
-                if AuthenticationManager.shared.register(email: email, password: password, confirmPassword: confirmPassword) == true {
+                if authManager.register(email: email, password: password, confirmPassword: confirmPassword) == true {
                     print("registration completed")
                     presentationMode.wrappedValue.dismiss()
                     
