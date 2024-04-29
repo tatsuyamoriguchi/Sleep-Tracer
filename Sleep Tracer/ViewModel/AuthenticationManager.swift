@@ -28,13 +28,12 @@ class AuthenticationManager {
         
         do {
             try Keychain.save(email: email, password: password)
-//            AuthenticationManager.isLoggedIn = true
-            print("User registred with email: \(email) and password: \(password)")
+            AuthenticationManager.isLoggedIn = true
+            print("User registered with email: \(email) and password: \(password)")
         } catch {
             AuthenticationManager.isLoggedIn = false
             print("Error saving user credentials: \(error.localizedDescription)")
         }
-        print("Hello")
         return AuthenticationManager.isLoggedIn
     }
     

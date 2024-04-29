@@ -51,7 +51,10 @@ struct Registration: View {
             
             Button("Register") {
                 // Perform registration action
-                if authManager.register(email: email, password: password, confirmPassword: confirmPassword) == true {
+                let isValid = authManager.register(email: email, password: password, confirmPassword: confirmPassword)
+                print(isValid)
+                
+                if isValid == true {
                     print("registration completed")
                     presentationMode.wrappedValue.dismiss()
                     

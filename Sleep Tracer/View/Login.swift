@@ -14,12 +14,17 @@ struct Login: View {
     @FocusState private var emailFieldIsFocused: Bool
     @State private var isLoggedIn: Bool = false
     @State private var message: String = "Enter email and password."
-
+    @State private var showRegistration = false
+    
     var body: some View {
-
+        
         let authManager = AuthenticationManager.shared
-            
-            VStack{
+        
+        VStack{
+            if isLoggedIn == true {
+                ContentView()
+            } else {
+                
                 HStack {
                     Image("Sleep Tracer")
                     Spacer()
@@ -52,12 +57,9 @@ struct Login: View {
                     Spacer()
                     Button("Login") {
                         // Perform login action
-                        let isLoggedIn = authManager.login(email: email, password: password)
-                        if isLoggedIn == true {
-                            print("isLoggedIn = true")
+                        isLoggedIn = authManager.login(email: email, password: password)
+                        if isLoggedIn == false {
                             
-                            
-                        } else {
                             message = "Wrong eMail address or password"
                             
                         }
@@ -67,19 +69,19 @@ struct Login: View {
                     Spacer()
                     Button("Register") {
                         // Navigate to Registration view
-                        self.isLoggedIn = false
-                    }.sheet(isPresented: $isLoggedIn, content: {
+                        showRegistration.toggle()
+                    }.sheet(isPresented: $showRegistration) {
                         Registration()
-                    })
+                    }
                     .foregroundStyle(Color("Button Color"))
                     Spacer()
                 }
                 
-                
-                
             }
-            .background(Color.black)
+            
         }
+        .background(Color.black)
+    }
     
 }
 
