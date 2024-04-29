@@ -12,9 +12,9 @@ struct ContentView: View {
 
     var body: some View {
                     
-        @State var loggedIn: Bool = true
+        @State var isLoggedIn: Bool = true
         Group {
-            if loggedIn == true {
+            if isLoggedIn == true {
                 TabView {
                     Home()
                         .tabItem {
@@ -34,8 +34,8 @@ struct ContentView: View {
                         }
                         .toolbarBackground(Color.black, for: .tabBar) // toolbarBackground is per tabItem, not per TabView
                         .onTapGesture {
-                            loggedIn = false
-                        }
+                            isLoggedIn = false
+                          }
                     
                 }
                 .toolbarColorScheme(.light, for: .tabBar)
