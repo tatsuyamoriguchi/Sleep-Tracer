@@ -11,11 +11,12 @@ import SwiftUI
 struct ContentView: View {
 
     var body: some View {
-                    
-        @State var isLoggedIn: Bool = true
+        @ObservedObject var authManager = AuthenticationManager()
+
+//        @State var isLoggedIn: Bool = true
         
         Group {
-            if isLoggedIn == true {
+            if authManager.isLoggedIn == true {
                 TabView {
                     Home()
                         .tabItem {
@@ -35,7 +36,7 @@ struct ContentView: View {
                         }
                         .toolbarBackground(Color.black, for: .tabBar) // toolbarBackground is per tabItem, not per TabView
                         .onTapGesture {
-                            isLoggedIn = false
+                            authManager.isLoggedIn = false
                           }
                     
                 }

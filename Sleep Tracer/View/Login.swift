@@ -12,16 +12,16 @@ struct Login: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @FocusState private var emailFieldIsFocused: Bool
-    @State private var isLoggedIn: Bool = false
     @State private var message: String = "Enter email and password."
     @State private var showRegistration = false
     
     var body: some View {
-        
-        let authManager = AuthenticationManager.shared
+        @ObservedObject var authManager = AuthenticationManager()
         
         VStack{
-            if isLoggedIn == true {
+
+            if authManager.isLoggedIn == true {
+
                 ContentView()
             } else {
                 
@@ -57,11 +57,12 @@ struct Login: View {
                     Spacer()
                     Button("Login") {
                         // Perform login action
-                        isLoggedIn = authManager.login(email: email, password: password)
-                        if isLoggedIn == false {
+                        authManager.isLoggedIn = authManager.login(email: email, password: password)
+                        if authManager.isLoggedIn == false {
                             
                             message = "Wrong eMail address or password"
-                            
+                        } else {
+                            ContentView()
                         }
                     }
                     .foregroundStyle(Color("Button Color"))

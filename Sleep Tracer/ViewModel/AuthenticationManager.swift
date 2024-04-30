@@ -14,7 +14,7 @@ class AuthenticationManager: ObservableObject {
 
     static let shared = AuthenticationManager()
     
-    private init() {}
+//    private init() {}
     
     func register(email: String, password: String, confirmPassword: String) -> Bool {
         // Perform registration logic
