@@ -13,6 +13,7 @@ struct ContentView: View {
     var body: some View {
                     
         @State var isLoggedIn: Bool = true
+        
         Group {
             if isLoggedIn == true {
                 TabView {

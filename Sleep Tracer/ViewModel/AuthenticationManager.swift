@@ -8,10 +8,11 @@
 import Foundation
 import Security
 
-class AuthenticationManager {
+class AuthenticationManager: ObservableObject {
+    @Published var isLoggedIn: Bool = false
+    //    static var isLoggedIn: Bool = false
 
     static let shared = AuthenticationManager()
-    static var isLoggedIn: Bool = false
     
     private init() {}
     
@@ -20,21 +21,21 @@ class AuthenticationManager {
         // Call authentification service to register a user
         if password != confirmPassword {
             print("password doesn't match with confirmPassword.")
-            AuthenticationManager.isLoggedIn = false
-            return AuthenticationManager.isLoggedIn
+            self.isLoggedIn = false
+            return self.isLoggedIn
         }
             
         
         
         do {
             try Keychain.save(email: email, password: password)
-            AuthenticationManager.isLoggedIn = true
+            self.isLoggedIn = true
             print("User registered with email: \(email) and password: \(password)")
         } catch {
-            AuthenticationManager.isLoggedIn = false
+            self.isLoggedIn = false
             print("Error saving user credentials: \(error.localizedDescription)")
         }
-        return AuthenticationManager.isLoggedIn
+        return self.isLoggedIn
     }
     
     func login(email: String, password: String) -> Bool {
@@ -44,20 +45,20 @@ class AuthenticationManager {
             do {
                 let retrievedPassword = try Keychain.shared.retrievePassword(forEmail: email)
                 if retrievedPassword == password {
-                    AuthenticationManager.isLoggedIn = true
+                    self.isLoggedIn = true
                     
-                    print("isLoggedIn = \(AuthenticationManager.isLoggedIn)")
+                    print("isLoggedIn = \(self.isLoggedIn)")
                     print("Passowrd matched")
                 } else {
-                    AuthenticationManager.isLoggedIn = false
-                    print("isLoggedIn = \(AuthenticationManager.isLoggedIn)")
+                    self.isLoggedIn = false
+                    print("isLoggedIn = \(self.isLoggedIn)")
                     print("Password unmatched")
                 }
             } catch {
                 print("Keychain.shared.retrievePassword(forEmail: email) returned an error.")
             }
         }
-        return AuthenticationManager.isLoggedIn
+        return self.isLoggedIn
     }
     
     func logout() {
