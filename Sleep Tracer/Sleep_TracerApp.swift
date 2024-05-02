@@ -11,17 +11,16 @@ import SwiftUI
 
 
 struct Sleep_TracerApp: App {
-    var body: some Scene {
+    @ObservedObject var authManager = AuthenticationManager()
 
-        // Temporal property to show Login() or ContentView()
-        var loggedIn: Bool = false
+    var body: some Scene {
         
         WindowGroup {
             Group {
-                if loggedIn == true {
-                    ContentView()
+                if authManager.isLoggedIn == true {
+                    ContentView(authManager: authManager)
                 } else {
-                    Login()
+                    Login(authManager: authManager)
                 }
             }
         }

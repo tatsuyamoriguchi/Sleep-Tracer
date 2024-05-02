@@ -14,17 +14,12 @@ struct Login: View {
     @FocusState private var emailFieldIsFocused: Bool
     @State private var message: String = "Enter email and password."
     @State private var showRegistration = false
-    
+    @State private var showContentView: Bool = false
+    @ObservedObject var authManager = AuthenticationManager()
+
     var body: some View {
-        @ObservedObject var authManager = AuthenticationManager()
         
         VStack{
-
-            if authManager.isLoggedIn == true {
-
-                ContentView()
-            } else {
-                
                 HStack {
                     Image("Sleep Tracer")
                     Spacer()
@@ -55,17 +50,25 @@ struct Login: View {
                 Spacer()
                 HStack {
                     Spacer()
+
                     Button("Login") {
-                        // Perform login action
-                        authManager.isLoggedIn = authManager.login(email: email, password: password)
-                        if authManager.isLoggedIn == false {
-                            
+                        if authManager.login(email: email, password: password) == false {
                             message = "Wrong eMail address or password"
                         } else {
-                            ContentView()
+                            print("isLoggedIn is true: \(authManager.isLoggedIn)")
+                            authManager.isLoggedIn = true
                         }
+                        
+                        if authManager.isLoggedIn == true {
+                            showContentView.toggle()
+                        }
+
+                    }
+                    .sheet(isPresented: $showContentView) {
+                        ContentView()
                     }
                     .foregroundStyle(Color("Button Color"))
+                    
                     
                     Spacer()
                     Button("Register") {
@@ -78,7 +81,8 @@ struct Login: View {
                     Spacer()
                 }
                 
-            }
+            
+//            }
             
         }
         .background(Color.black)

@@ -10,12 +10,9 @@ import Security
 
 class AuthenticationManager: ObservableObject {
     @Published var isLoggedIn: Bool = false
-    //    static var isLoggedIn: Bool = false
 
     static let shared = AuthenticationManager()
-    
-//    private init() {}
-    
+        
     func register(email: String, password: String, confirmPassword: String) -> Bool {
         // Perform registration logic
         // Call authentification service to register a user
