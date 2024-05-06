@@ -13,19 +13,19 @@ struct ContentView: View {
     
     var body: some View {
         
-       Group {
+        Group {
             
             if authManager.isLoggedIn {
                 ContentViewWithTabs(authManager: authManager)
             } else {
                 Login(authManager: authManager)
             }
-           
+            
         }
     }
 }
-    
- 
+
+
 struct ContentViewWithTabs: View {
     @ObservedObject var authManager: AuthenticationManager
     
@@ -44,17 +44,19 @@ struct ContentViewWithTabs: View {
                 .tabItem {
                     Label("Resperatory Rate", systemImage: "lungs.fill")
                 }
-
-            Text("Confirm to Logout")
-            .tabItem {
-                Label("Logout",  systemImage: "square.and.arrow.up")
-            }
-            .onTapGesture {
+                .toolbarBackground(.visible, for: .tabBar)
+                .toolbarBackground(Color.black, for: .tabBar)
+            Text("Tap to Logout")
+                .tabItem {
+                    Label("Logout",  systemImage: "square.and.arrow.up")
+                }
+                .toolbarBackground(.visible, for: .tabBar)
+                .toolbarBackground(Color.black, for: .tabBar)
+                .onTapGesture {
                     authManager.isLoggedIn = false
-            }
-            .toolbarBackground(Color.black, for: .tabBar)
+                }
         }
-        .toolbarColorScheme(.light, for: .tabBar)
+//        .toolbarColorScheme(.none, for: .tabBar)
         
     }
 }

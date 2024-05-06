@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Login: View {
-    
+
     @State private var email: String = ""
     @State private var password: String = ""
     @FocusState private var emailFieldIsFocused: Bool
@@ -16,9 +16,9 @@ struct Login: View {
     @State private var showRegistration = false
     @State private var showContentView: Bool = false
     @ObservedObject var authManager = AuthenticationManager()
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
     var body: some View {
-        
         VStack{
                 HStack {
                     Image("Sleep Tracer")
@@ -42,8 +42,6 @@ struct Login: View {
                 
                     .textFieldStyle()
                 
-                
-                
                 Text(message)
                     .foregroundStyle(Color.white)
                 Spacer()
@@ -55,20 +53,10 @@ struct Login: View {
                         if authManager.login(email: email, password: password) == false {
                             message = "Wrong eMail address or password"
                         } else {
-                            print("isLoggedIn is true: \(authManager.isLoggedIn)")
-                            authManager.isLoggedIn = true
+                            presentationMode.wrappedValue.dismiss()
                         }
-                        
-                        if authManager.isLoggedIn == true {
-                            showContentView.toggle()
-                        }
-
-                    }
-                    .sheet(isPresented: $showContentView) {
-                        ContentView()
                     }
                     .foregroundStyle(Color("Button Color"))
-                    
                     
                     Spacer()
                     Button("Register") {
@@ -81,9 +69,6 @@ struct Login: View {
                     Spacer()
                 }
                 
-            
-//            }
-            
         }
         .background(Color.black)
     }
