@@ -50,22 +50,33 @@ struct Registration: View {
             Spacer()
             
             Button("Register") {
-                // Perform registration action
-                let isValid = authManager.register(email: email, password: password, confirmPassword: confirmPassword)
-                print(isValid)
-                
-                if isValid == true {
-                    print("registration completed")
-                    presentationMode.wrappedValue.dismiss()
-                    
-                } else {
-                    message = "Confirm Password doesn't match with Password. Try it again."
+                // Check if a user already exists.
+                if authManager.registrationEnabled() == false {
+                    message = "A user already exists."
                     email = ""
                     password = ""
                     confirmPassword = ""
                     
-                    print("Issue in AuthenticationManager.shared.register(email: email, password: password, confirmPassword)")
                     
+                } else {
+                    
+                    // Perform registration action
+                    let isValid = authManager.register(email: email, password: password, confirmPassword: confirmPassword)
+                    print(isValid)
+                    
+                    if isValid == true {
+                        print("registration completed")
+                        presentationMode.wrappedValue.dismiss()
+                        
+                    } else {
+                        message = "Confirm Password doesn't match with Password. Try it again."
+                        email = ""
+                        password = ""
+                        confirmPassword = ""
+                        
+                        print("Issue in AuthenticationManager.shared.register(email: email, password: password, confirmPassword)")
+                        
+                    }
                 }
             }
             .foregroundStyle(Color("Button Color"))

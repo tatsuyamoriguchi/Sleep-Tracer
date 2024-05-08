@@ -13,8 +13,17 @@ class AuthenticationManager: ObservableObject {
 
     static let shared = AuthenticationManager()
         
+    func registrationEnabled() -> Bool {
+        return Keychain.doesAnyUserExist()
+    }
+    
     func register(email: String, password: String, confirmPassword: String) -> Bool {
         // Perform registration logic
+        
+        
+        // Verify if a user already exists in Keychain
+        
+        
         // Call authentification service to register a user
         if password != confirmPassword {
             print("password doesn't match with confirmPassword.")
@@ -69,6 +78,37 @@ struct Keychain {
     static let shared = Keychain()
     static let service = "SleepTracer"
     
+    // Function to check if a user account already exists in Keychain
+    static func doesAnyUserExist() -> Bool {
+        // Define query parameters
+        let query: [String: Any] = [
+            kSecReturnAttributes as String: true,
+            kSecMatchLimit as String: kSecMatchLimitAll,
+            //            kSecClass as String: kSecClassGenericPassword,
+            //            kSecAttrService as String: "YourAppServiceName", // Unique identifier for your app
+            kSecAttrAccount as String: Keychain.service // Unique identifier for the user
+        ]
+        
+        // Try to fetch existing item from Keychain
+        var result: CFTypeRef?
+        let status = SecItemCopyMatching(query as CFDictionary, &result)
+        
+        // Check if user account exists or not
+        if status == errSecSuccess {
+            guard let items = result as? [[String: Any]] else {
+                return false
+            }
+            return !items.isEmpty
+        } else if status == errSecItemNotFound {
+            return false
+        } else {
+            print("Keychain error: \(status)")
+            return false
+        }
+    }
+    
+
+
     static func save(email: String, password: String) throws {
         guard let passwordData = password.data(using: .utf8) else {
             throw KeychainError.dataConversionError
