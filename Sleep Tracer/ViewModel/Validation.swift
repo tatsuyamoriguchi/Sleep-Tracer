@@ -16,7 +16,10 @@ struct Validation {
     }
     
     func isValidPassword(_ password: String) -> Bool {
-        let passwordRegex = #"^(?=.*[!@#$%^&*()_+\\-={}[\]|;:'",.<>?])[A-Za-z0-9!@#$%^&*()_+\\-={}[\]|;:'",.<>?]{8,}$"#
+//      let passwordRegex = #"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[d$@$!%*?&#])[A-Za-z\\dd$@$!%*?&#]{8,}"#
+        let passwordRegex = #"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,}$"#
+
+
         let passwordPredicate = NSPredicate(format:"SELF MATCHES %@", passwordRegex)
         return passwordPredicate.evaluate(with: password)
     }
