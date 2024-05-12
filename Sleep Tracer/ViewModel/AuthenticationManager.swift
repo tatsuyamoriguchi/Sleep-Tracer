@@ -58,11 +58,6 @@ class AuthenticationManager: ObservableObject {
         }
         return self.isLoggedIn
     }
-    
-    func logout() {
-        // Perform logout logic
-        // Clear user session data
-    }
 }
 
 struct Keychain {
