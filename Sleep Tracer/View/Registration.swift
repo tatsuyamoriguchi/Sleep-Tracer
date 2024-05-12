@@ -65,7 +65,7 @@ struct Registration: View {
                     confirmPassword = ""
                 } else {
                     // Check if a user already exists.
-                    if authManager.registrationEnabled() == false {
+                    if Keychain.doesAnyUserExist() == true {
                         message = "A user already exists. Only one user per a device is allowed."
                         email = ""
                         password = ""
@@ -105,7 +105,7 @@ extension Registration {
             presentationMode.wrappedValue.dismiss()
             
         } else {
-            message = "Issue in AuthenticationManager.shared.register(email: email, password: password, confirmPassword)"
+            message = "Unable to register. That user account already exists."
             email = ""
             password = ""
             confirmPassword = ""

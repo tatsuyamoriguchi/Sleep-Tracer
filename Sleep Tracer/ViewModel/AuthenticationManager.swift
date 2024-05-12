@@ -13,16 +13,9 @@ class AuthenticationManager: ObservableObject {
 
     static let shared = AuthenticationManager()
         
-    func registrationEnabled() -> Bool {
-        return Keychain.doesAnyUserExist()
-    }
     
     func register(email: String, password: String, confirmPassword: String) -> Bool {
         // Perform registration logic
-        
-        
-        // Verify if a user already exists in Keychain
-        
         
         // Call authentification service to register a user
         if password != confirmPassword {
@@ -31,7 +24,6 @@ class AuthenticationManager: ObservableObject {
             return self.isLoggedIn
         }
             
-        
         
         do {
             try Keychain.save(email: email, password: password)
@@ -82,23 +74,19 @@ struct Keychain {
     static func doesAnyUserExist() -> Bool {
         // Define query parameters
         let query: [String: Any] = [
-            kSecReturnAttributes as String: true,
-            kSecMatchLimit as String: kSecMatchLimitAll,
-            //            kSecClass as String: kSecClassGenericPassword,
-            //            kSecAttrService as String: "YourAppServiceName", // Unique identifier for your app
-            kSecAttrAccount as String: Keychain.service // Unique identifier for the user
+            kSecClass as String: kSecClassGenericPassword,
+            kSecMatchLimit as String: kSecMatchLimitOne,
+            kSecReturnAttributes as String: true
         ]
         
         // Try to fetch existing item from Keychain
         var result: CFTypeRef?
         let status = SecItemCopyMatching(query as CFDictionary, &result)
+        print("doesAnyUserExist SecItemCopyMatching status: \(status)")
         
         // Check if user account exists or not
         if status == errSecSuccess {
-            guard let items = result as? [[String: Any]] else {
-                return false
-            }
-            return !items.isEmpty
+            return true
         } else if status == errSecItemNotFound {
             return false
         } else {
@@ -106,7 +94,6 @@ struct Keychain {
             return false
         }
     }
-    
 
 
     static func save(email: String, password: String) throws {
@@ -138,6 +125,7 @@ struct Keychain {
             
             var result: AnyObject?
             let status = SecItemCopyMatching(query as CFDictionary, &result)
+        print("retrievePassword SecItemCopyMatching status: \(status)")
             
             guard status == errSecSuccess else {
                 if status == errSecItemNotFound {
