@@ -27,10 +27,11 @@ struct ResperatoryView: View {
 
            let count = statistics.averageQuantity()?.doubleValue(for: HKUnit(from: "count/min"))
             
-            let respiratery = RespiratoryRate(count: Int(count ?? 0), date: statistics.startDate)
-            counts.append(respiratery)
-
+            let respiratory = RespiratoryRate(count: Int(count ?? 0), date: statistics.startDate)
+            counts.append(respiratory)
         }
+        
+        counts = counts.sorted { $0.date > $1.date }
     }
     
     var body: some View {
@@ -61,7 +62,6 @@ struct ResperatoryView: View {
                         .foregroundColor(.cyan)
                 }
             }
-//            .navigationTitle("Respiratory Rates")
 
             .toolbarBackground(.visible, for: .navigationBar)            // The color scheme will apply only when the background is shown.
             .toolbarBackground(Color.black, for: .navigationBar) // Specify the color of the toolbar background.
