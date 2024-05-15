@@ -95,11 +95,24 @@ struct Keychain {
         guard let passwordData = password.data(using: .utf8) else {
             throw KeychainError.dataConversionError
         }
+        
+        var cfError: Unmanaged<CFError>?
+        
+        guard let accessControl = SecAccessControlCreateWithFlags(nil, kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly, .biometryCurrentSet, &cfError) else {
+            if let error = cfError {
+                  print("Error creating access control:", error.takeRetainedValue() as Error)
+              } else {
+                  print("Unknown error creating access control")
+              }
+            return
+        }
+        
         let query: [String:Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: service,
             kSecAttrAccount as String: email,
-            kSecValueData as String: passwordData
+            kSecValueData as String: passwordData,
+            kSecAttrAccessControl as String: accessControl
         ]
         
         let status = SecItemAdd(query as CFDictionary, nil)
