@@ -1,5 +1,5 @@
 //
-//  ResperatoryView.swift
+//  RespiratoryView.swift
 //  Sleep Tracer
 //
 //  Created by Tatsuya Moriguchi on 4/6/22.
@@ -8,7 +8,7 @@
 import SwiftUI
 import HealthKit
 
-struct ResperatoryView: View {
+struct RespiratoryView: View {
     
     private var healthStore: HealthStore?
     init() {
@@ -36,24 +36,32 @@ struct ResperatoryView: View {
     
     var body: some View {
         NavigationView {
+            
             List(counts, id: \.id) { i in
+               
                 Text(i.date, style: .date)
                     .opacity(0.5)
                 Text(i.date, style: .time)
                     .opacity(0.5)
 
+                // Change font color based on value.
                 switch i.count {
                 case 0:
                     Text("")
                 case 1..<10:
+                    // too low rate
                     Text("\(i.count)").foregroundColor(.blue)
                 case 10..<20:
                     Text("\(i.count)")
                 case 20...:
+                    // too high rate
                     Text("\(i.count)").foregroundColor(.red)
                 default:
                     Text("")
                 }
+            }
+            .refreshable {
+                
             }
             .toolbar {
                 ToolbarItem {
@@ -72,24 +80,28 @@ struct ResperatoryView: View {
     
         // Display Authorization Request
         .onAppear() {
-            // Unwrap healthStore
-            if let healthStore = healthStore {
-                // Request authorization
-                healthStore.requestAuthorization { (success) in
-                    // if requestAuthorization is success,
-                    if success {
-                        // Calculate
-                        print("Authorization success")
-                        healthStore.calculateRates { statisticsCollection in
-                            if let statisticsCollection = statisticsCollection {
-                                // update the UI
-                                updateUIFromStatistics(statisticsCollection)
+            getData()
+        }
+    }
+    
+    func getData() {
+        // Unwrap healthStore
+        if let healthStore = healthStore {
+            // Request authorization
+            healthStore.requestAuthorization { (success) in
+                // if requestAuthorization is success,
+                if success {
+                    // Calculate
+                    print("Authorization success")
+                    healthStore.calculateRates { statisticsCollection in
+                        if let statisticsCollection = statisticsCollection {
+                            // update the UI
+                            updateUIFromStatistics(statisticsCollection)
 
-                            }
                         }
-                    } else {
-                        print("Authorization failed.")
                     }
+                } else {
+                    print("Authorization failed.")
                 }
             }
         }
@@ -98,6 +110,6 @@ struct ResperatoryView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ResperatoryView()
+        RespiratoryView()
     }
 }
