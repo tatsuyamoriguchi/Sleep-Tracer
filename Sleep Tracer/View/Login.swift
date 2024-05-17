@@ -50,8 +50,11 @@ struct Login: View {
                     Spacer()
 
                     Button("Login") {
-                        if authManager.login(email: email, password: password) == false {
-                            message = "Wrong eMail address or password"
+                        if !Keychain.doesAnyUserExist() {
+                            print("User doen's exist.")
+                            message = "No user exists. Register your account by clicking Register button below."
+                        } else if authManager.login(email: email, password: password) == false {
+                            message = "Wrong eMail address or password\nTo retrieve your email address and password information, please access the Passwords section in the Settings app."
                         } else {
                             presentationMode.wrappedValue.dismiss()
                         }

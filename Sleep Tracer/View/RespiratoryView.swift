@@ -23,6 +23,9 @@ struct RespiratoryView: View {
         let startDate = Calendar.current.date(byAdding: .day, value: -7, to: Date())!
         let endDate = Date()
         
+        // Clear the counts array to prevent duplicates
+        counts.removeAll()
+        
         statisticsCollection.enumerateStatistics(from: startDate, to: endDate) { (statistics, stop) in
 
            let count = statistics.averageQuantity()?.doubleValue(for: HKUnit(from: "count/min"))
@@ -60,9 +63,9 @@ struct RespiratoryView: View {
                     Text("")
                 }
             }
-            .refreshable {
-                
-            }
+            .refreshable(action: {
+                getData()
+            })
             .toolbar {
                 ToolbarItem {
                     Text("Respiratory Rates")
@@ -77,11 +80,11 @@ struct RespiratoryView: View {
             .scrollContentBackground(.hidden) // To change the List view background color, hide the scrollContentBackgroudn first.
             .background(.black) // Then change the background color
         }
-    
         // Display Authorization Request
         .onAppear() {
             getData()
         }
+
     }
     
     func getData() {

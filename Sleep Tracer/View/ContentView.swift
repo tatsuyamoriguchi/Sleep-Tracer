@@ -40,7 +40,7 @@ struct ContentViewWithTabs: View {
                 .toolbarBackground(.visible, for: .tabBar) // since it's hidden by default
                 .toolbarBackground(Color.black, for: .tabBar) // toolbarBackground is per tabItem, not per TabView
             
-            ResperatoryView()
+            RespiratoryView()
                 .tabItem {
                     Label("Resperatory Rate", systemImage: "lungs.fill")
                 }

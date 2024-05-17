@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8C2BC4612BD59CAE00D71A5A /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BC4602BD59CAE00D71A5A /* Registration.swift */; };
 		8C30E92027FE05A70050C677 /* Sleep_TracerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E91F27FE05A70050C677 /* Sleep_TracerApp.swift */; };
-		8C30E92227FE05A70050C677 /* ResperatoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E92127FE05A70050C677 /* ResperatoryView.swift */; };
+		8C30E92227FE05A70050C677 /* RespiratoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E92127FE05A70050C677 /* RespiratoryView.swift */; };
 		8C30E92427FE05A90050C677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C30E92327FE05A90050C677 /* Assets.xcassets */; };
 		8C30E92727FE05A90050C677 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C30E92627FE05A90050C677 /* Preview Assets.xcassets */; };
 		8C30E93227FE73BB0050C677 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C30E93127FE73BB0050C677 /* HealthKit.framework */; };
@@ -29,7 +29,7 @@
 		8C2BC4602BD59CAE00D71A5A /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		8C30E91C27FE05A70050C677 /* Sleep Tracer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sleep Tracer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C30E91F27FE05A70050C677 /* Sleep_TracerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sleep_TracerApp.swift; sourceTree = "<group>"; };
-		8C30E92127FE05A70050C677 /* ResperatoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResperatoryView.swift; sourceTree = "<group>"; };
+		8C30E92127FE05A70050C677 /* RespiratoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespiratoryView.swift; sourceTree = "<group>"; };
 		8C30E92327FE05A90050C677 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C30E92627FE05A90050C677 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8C30E92827FE05A90050C677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		8C2CC83028053A2B00B39D7A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8C30E92127FE05A70050C677 /* ResperatoryView.swift */,
+				8C30E92127FE05A70050C677 /* RespiratoryView.swift */,
 				8C5C1D2C2BB9DF50008DC1E8 /* Login.swift */,
 				8CBF19F92BBDECE4001BEBA0 /* Home.swift */,
 				8CDEB0E72BBF1A6F00820169 /* ContentView.swift */,
@@ -213,7 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C2BC4612BD59CAE00D71A5A /* Registration.swift in Sources */,
-				8C30E92227FE05A70050C677 /* ResperatoryView.swift in Sources */,
+				8C30E92227FE05A70050C677 /* RespiratoryView.swift in Sources */,
 				8C5C1D2D2BB9DF50008DC1E8 /* Login.swift in Sources */,
 				8C7435E62BD81F0200C889A2 /* AuthenticationManager.swift in Sources */,
 				8CDEB0E82BBF1A6F00820169 /* ContentView.swift in Sources */,

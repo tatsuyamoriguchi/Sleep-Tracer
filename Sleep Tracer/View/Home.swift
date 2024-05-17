@@ -12,6 +12,8 @@ struct Home: View {
     var body: some View {
         
         Text("Home - Dashboard")
+            .shadow(radius: 20)
+
     }
 }
 

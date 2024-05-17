@@ -70,6 +70,7 @@ struct Keychain {
         // Define query parameters
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: Keychain.service,
             kSecMatchLimit as String: kSecMatchLimitOne,
             kSecReturnAttributes as String: true
         ]
