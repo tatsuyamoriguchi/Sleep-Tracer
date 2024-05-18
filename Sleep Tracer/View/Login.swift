@@ -33,14 +33,14 @@ struct Login: View {
                     .onSubmit {
                         //                        validate(email: useremail)
                     }
-                    .textFieldStyle()
+                    .modifier(TextFieldModifier())
                 
                 SecureField("Enter a password", text: $password)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
                     .scrollContentBackground(.hidden)
                 
-                    .textFieldStyle()
+                    .modifier(TextFieldModifier())
                 
                 Text(message)
                     .foregroundStyle(Color.white)

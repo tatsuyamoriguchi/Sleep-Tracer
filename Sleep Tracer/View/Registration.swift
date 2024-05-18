@@ -35,15 +35,15 @@ struct Registration: View {
                 .onSubmit {
                     //                        validate(name: username)
                 }
-                .textFieldStyle()
+                .modifier(TextFieldModifier())
             
             SecureField("Enter a password", text: $password)
-                .credentialFieldStyle()
-                .textFieldStyle()
+                .modifier(CredentialFieldStyle())
+                .modifier(TextFieldModifier())
             
             SecureField("Confirm Password", text: $confirmPassword)
-                .credentialFieldStyle()
-                .textFieldStyle()
+                .modifier(CredentialFieldStyle())
+                .modifier(TextFieldModifier())
             
             Spacer()
             Spacer()

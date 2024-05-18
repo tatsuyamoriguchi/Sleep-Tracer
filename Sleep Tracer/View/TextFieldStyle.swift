@@ -8,9 +8,10 @@
 import Foundation
 import SwiftUI
 
-extension View {
-    func textFieldStyle() -> some View {
-        self.frame(minWidth: 250)
+struct TextFieldModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .frame(minWidth: 250)
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .fixedSize(horizontal: true, vertical: false)
         
@@ -18,14 +19,16 @@ extension View {
             .disableAutocorrection(true)
             .background(Color.white)
             .textFieldStyle(.roundedBorder)
-
+        
     }
-    
-    func credentialFieldStyle() -> some View {
-        self.disableAutocorrection(true)
-            .autocapitalization(.none)
-//            .scrollContentBackground(.hidden)
+}
 
+
+struct CredentialFieldStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .disableAutocorrection(true)
+            .autocapitalization(.none)
     }
     
 }
