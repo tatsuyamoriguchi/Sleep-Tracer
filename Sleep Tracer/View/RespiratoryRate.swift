@@ -1,5 +1,5 @@
 //
-//  RespiratoryView.swift
+//  RespiratoryRate.swift
 //  Sleep Tracer
 //
 //  Created by Tatsuya Moriguchi on 4/6/22.
@@ -8,7 +8,7 @@
 import SwiftUI
 import HealthKit
 
-struct RespiratoryView: View {
+struct RespiratoryRate: View {
     
     private var healthStore: HealthStore?
     init() {
@@ -113,6 +113,6 @@ struct RespiratoryView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        RespiratoryView()
+        RespiratoryRate()
     }
 }
