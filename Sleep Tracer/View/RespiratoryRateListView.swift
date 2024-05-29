@@ -1,5 +1,5 @@
 //
-//  RespiratoryRate.swift
+//  RespiratoryRateListView.swift
 //  Sleep Tracer
 //
 //  Created by Tatsuya Moriguchi on 4/6/22.
@@ -8,14 +8,39 @@
 import SwiftUI
 import HealthKit
 
+
+enum DisplayType: Int, Identifiable, CaseIterable {
+    case list
+    case chart
+    
+    var id: Int {
+        rawValue
+    }
+}
+
+extension DisplayType {
+    var icon: String {
+        switch self {
+        case .list:
+            return "list.bullet"
+        case .chart:
+            return "chart.bar"
+        }
+    }
+}
+
+
 struct RespiratoryRate: View {
+    
+    @State private var displayType: DisplayType = .list
+    
     
     private var healthStore: HealthStore?
     init() {
         healthStore = HealthStore()
     }
     
-    @State private var counts: [RespiratoryRate] = [RespiratoryRate]()
+    @State private var counts: [RespiratoryRateData] = [RespiratoryRateData]()
     
     
     private func updateUIFromStatistics(_ statisticsCollection: HKStatisticsCollection) {
@@ -30,7 +55,7 @@ struct RespiratoryRate: View {
 
            let count = statistics.averageQuantity()?.doubleValue(for: HKUnit(from: "count/min"))
             
-            let respiratory = RespiratoryRate(count: Int(count ?? 0), date: statistics.startDate)
+            let respiratory = RespiratoryRateData(count: Int(count ?? 0), date: statistics.startDate)
             counts.append(respiratory)
         }
         
@@ -38,29 +63,33 @@ struct RespiratoryRate: View {
     }
     
     var body: some View {
+        
         NavigationView {
-            
-            List(counts, id: \.id) { i in
-               
-                Text(i.date, style: .date)
-                    .opacity(0.5)
-                Text(i.date, style: .time)
-                    .opacity(0.5)
 
-                // Change font color based on value.
-                switch i.count {
-                case 0:
-                    Text("")
-                case 1..<10:
-                    // too low rate
-                    Text("\(i.count)").foregroundColor(.blue)
-                case 10..<20:
-                    Text("\(i.count)")
-                case 20...:
-                    // too high rate
-                    Text("\(i.count)").foregroundColor(.red)
-                default:
-                    Text("")
+            List(counts, id: \.id) { i in
+                HStack {
+                    
+                    Text(i.date, style: .date)
+                        .opacity(0.5)
+                    Spacer()
+                    Text(i.date, style: .time)
+                        .opacity(0.5)
+                    Spacer()
+                    // Change font color based on value.
+                    switch i.count {
+                    case 0:
+                        Text("")
+                    case 1..<10:
+                        // too low rate
+                        Text("\(i.count)").foregroundColor(.blue)
+                    case 10..<20:
+                        Text("\(i.count)")
+                    case 20...:
+                        // too high rate
+                        Text("\(i.count)").foregroundColor(.red)
+                    default:
+                        Text("")
+                    }
                 }
             }
             .refreshable(action: {

@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct RespiratoryRate: Identifiable, Hashable {
+struct RespiratoryRateData: Identifiable, Hashable {
     let id = UUID()
     let count: Int
     let date: Date
