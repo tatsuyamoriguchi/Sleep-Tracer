@@ -8,33 +8,8 @@
 import SwiftUI
 import HealthKit
 
-
-enum DisplayType: Int, Identifiable, CaseIterable {
-    case list
-    case chart
-    
-    var id: Int {
-        rawValue
-    }
-}
-
-extension DisplayType {
-    var icon: String {
-        switch self {
-        case .list:
-            return "list.bullet"
-        case .chart:
-            return "chart.bar"
-        }
-    }
-}
-
-
-struct RespiratoryRate: View {
-    
-    @State private var displayType: DisplayType = .list
-    
-    
+struct RespiratoryRateListView: View {
+ 
     private var healthStore: HealthStore?
     init() {
         healthStore = HealthStore()
@@ -52,8 +27,8 @@ struct RespiratoryRate: View {
         counts.removeAll()
         
         statisticsCollection.enumerateStatistics(from: startDate, to: endDate) { (statistics, stop) in
-
-           let count = statistics.averageQuantity()?.doubleValue(for: HKUnit(from: "count/min"))
+            
+            let count = statistics.averageQuantity()?.doubleValue(for: HKUnit(from: "count/min"))
             
             let respiratory = RespiratoryRateData(count: Int(count ?? 0), date: statistics.startDate)
             counts.append(respiratory)
@@ -64,16 +39,18 @@ struct RespiratoryRate: View {
     
     var body: some View {
         
-        NavigationView {
-
+//        NavigationView {
+            
             List(counts, id: \.id) { i in
                 HStack {
                     
                     Text(i.date, style: .date)
                         .opacity(0.5)
+                        .foregroundColor(.white)
                     Spacer()
                     Text(i.date, style: .time)
                         .opacity(0.5)
+                        .foregroundColor(.white)
                     Spacer()
                     // Change font color based on value.
                     switch i.count {
@@ -84,36 +61,34 @@ struct RespiratoryRate: View {
                         Text("\(i.count)").foregroundColor(.blue)
                     case 10..<20:
                         Text("\(i.count)")
+                            .foregroundColor(.white)
                     case 20...:
                         // too high rate
                         Text("\(i.count)").foregroundColor(.red)
+
                     default:
                         Text("")
                     }
+
                 }
+                .listRowBackground(Color.black)
+
             }
             .refreshable(action: {
                 getData()
             })
-            .toolbar {
-                ToolbarItem {
-                    Text("Respiratory Rates")
-                        .font(.custom("Inter-ExtraLight", size: 34))
-                        .foregroundColor(.cyan)
-                }
-            }
-
+            
             .toolbarBackground(.visible, for: .navigationBar)            // The color scheme will apply only when the background is shown.
-            .toolbarBackground(Color.black, for: .navigationBar) // Specify the color of the toolbar background.
+            .toolbarBackground(Color.white, for: .navigationBar) // Specify the color of the toolbar background.
             .toolbarColorScheme(.dark, for: .navigationBar) // By specifying the corlor scheme to dark, the font color changes to white.
             .scrollContentBackground(.hidden) // To change the List view background color, hide the scrollContentBackgroudn first.
             .background(.black) // Then change the background color
-        }
+//        }
         // Display Authorization Request
         .onAppear() {
             getData()
         }
-
+        
     }
     
     func getData() {
@@ -129,7 +104,7 @@ struct RespiratoryRate: View {
                         if let statisticsCollection = statisticsCollection {
                             // update the UI
                             updateUIFromStatistics(statisticsCollection)
-
+                            
                         }
                     }
                 } else {
@@ -138,10 +113,14 @@ struct RespiratoryRate: View {
             }
         }
     }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        RespiratoryRate()
+//        NavigationStack {
+            RespiratoryRateListView()
+//        }
     }
 }

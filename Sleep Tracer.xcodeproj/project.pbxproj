@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C2AEC292C064FD500A80EF4 /* RespiratoryRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2AEC282C064FD500A80EF4 /* RespiratoryRateView.swift */; };
 		8C2BC4612BD59CAE00D71A5A /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BC4602BD59CAE00D71A5A /* Registration.swift */; };
 		8C30E92027FE05A70050C677 /* Sleep_TracerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E91F27FE05A70050C677 /* Sleep_TracerApp.swift */; };
-		8C30E92227FE05A70050C677 /* RespiratoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E92127FE05A70050C677 /* RespiratoryView.swift */; };
+		8C30E92227FE05A70050C677 /* RespiratoryRateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30E92127FE05A70050C677 /* RespiratoryRateListView.swift */; };
 		8C30E92427FE05A90050C677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C30E92327FE05A90050C677 /* Assets.xcassets */; };
 		8C30E92727FE05A90050C677 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C30E92627FE05A90050C677 /* Preview Assets.xcassets */; };
 		8C30E93227FE73BB0050C677 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C30E93127FE73BB0050C677 /* HealthKit.framework */; };
 		8C54446927FF9BAF00C296D7 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54446827FF9BAF00C296D7 /* HealthStore.swift */; };
-		8C54446D27FFB4C300C296D7 /* RespirateryRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54446C27FFB4C300C296D7 /* RespirateryRate.swift */; };
+		8C54446D27FFB4C300C296D7 /* RespirateryRateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54446C27FFB4C300C296D7 /* RespirateryRateData.swift */; };
 		8C5C1D2D2BB9DF50008DC1E8 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5C1D2C2BB9DF50008DC1E8 /* Login.swift */; };
 		8C7435E42BD6DBC200C889A2 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7435E32BD6DBC200C889A2 /* TextFieldStyle.swift */; };
 		8C7435E62BD81F0200C889A2 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7435E52BD81F0200C889A2 /* AuthenticationManager.swift */; };
+		8C85E8C82BFA843B005B6201 /* RespiratoryGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E8C72BFA843B005B6201 /* RespiratoryGraph.swift */; };
 		8CB4F4842BED429800BA2A90 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB4F4832BED429800BA2A90 /* Validation.swift */; };
 		8CB4F4A02BF1316700BA2A90 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB4F49F2BF1316700BA2A90 /* Security.framework */; };
 		8CBF19FA2BBDECE4001BEBA0 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBF19F92BBDECE4001BEBA0 /* Home.swift */; };
@@ -26,20 +28,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C2AEC282C064FD500A80EF4 /* RespiratoryRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespiratoryRateView.swift; sourceTree = "<group>"; };
 		8C2BC4602BD59CAE00D71A5A /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		8C30E91C27FE05A70050C677 /* Sleep Tracer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sleep Tracer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C30E91F27FE05A70050C677 /* Sleep_TracerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sleep_TracerApp.swift; sourceTree = "<group>"; };
-		8C30E92127FE05A70050C677 /* RespiratoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespiratoryView.swift; sourceTree = "<group>"; };
+		8C30E92127FE05A70050C677 /* RespiratoryRateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespiratoryRateListView.swift; sourceTree = "<group>"; };
 		8C30E92327FE05A90050C677 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C30E92627FE05A90050C677 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8C30E92827FE05A90050C677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C30E92F27FE73BB0050C677 /* Sleep Tracer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Sleep Tracer.entitlements"; sourceTree = "<group>"; };
 		8C30E93127FE73BB0050C677 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		8C54446827FF9BAF00C296D7 /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
-		8C54446C27FFB4C300C296D7 /* RespirateryRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespirateryRate.swift; sourceTree = "<group>"; };
+		8C54446C27FFB4C300C296D7 /* RespirateryRateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespirateryRateData.swift; sourceTree = "<group>"; };
 		8C5C1D2C2BB9DF50008DC1E8 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		8C7435E32BD6DBC200C889A2 /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
 		8C7435E52BD81F0200C889A2 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		8C85E8C72BFA843B005B6201 /* RespiratoryGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespiratoryGraph.swift; sourceTree = "<group>"; };
 		8CB4F4832BED429800BA2A90 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		8CB4F49F2BF1316700BA2A90 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		8CBF19F92BBDECE4001BEBA0 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -63,10 +67,11 @@
 		8C2CC83028053A2B00B39D7A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8C30E92127FE05A70050C677 /* RespiratoryView.swift */,
 				8C5C1D2C2BB9DF50008DC1E8 /* Login.swift */,
-				8CBF19F92BBDECE4001BEBA0 /* Home.swift */,
 				8CDEB0E72BBF1A6F00820169 /* ContentView.swift */,
+				8CBF19F92BBDECE4001BEBA0 /* Home.swift */,
+				8C2AEC282C064FD500A80EF4 /* RespiratoryRateView.swift */,
+				8C30E92127FE05A70050C677 /* RespiratoryRateListView.swift */,
 				8C2BC4602BD59CAE00D71A5A /* Registration.swift */,
 				8C7435E32BD6DBC200C889A2 /* TextFieldStyle.swift */,
 			);
@@ -79,6 +84,7 @@
 				8C54446827FF9BAF00C296D7 /* HealthStore.swift */,
 				8C7435E52BD81F0200C889A2 /* AuthenticationManager.swift */,
 				8CB4F4832BED429800BA2A90 /* Validation.swift */,
+				8C85E8C72BFA843B005B6201 /* RespiratoryGraph.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -136,7 +142,7 @@
 		8C54446B27FFB49B00C296D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8C54446C27FFB4C300C296D7 /* RespirateryRate.swift */,
+				8C54446C27FFB4C300C296D7 /* RespirateryRateData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,13 +219,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C2BC4612BD59CAE00D71A5A /* Registration.swift in Sources */,
-				8C30E92227FE05A70050C677 /* RespiratoryView.swift in Sources */,
+				8C2AEC292C064FD500A80EF4 /* RespiratoryRateView.swift in Sources */,
+				8C30E92227FE05A70050C677 /* RespiratoryRateListView.swift in Sources */,
 				8C5C1D2D2BB9DF50008DC1E8 /* Login.swift in Sources */,
 				8C7435E62BD81F0200C889A2 /* AuthenticationManager.swift in Sources */,
 				8CDEB0E82BBF1A6F00820169 /* ContentView.swift in Sources */,
 				8CB4F4842BED429800BA2A90 /* Validation.swift in Sources */,
 				8C54446927FF9BAF00C296D7 /* HealthStore.swift in Sources */,
-				8C54446D27FFB4C300C296D7 /* RespirateryRate.swift in Sources */,
+				8C54446D27FFB4C300C296D7 /* RespirateryRateData.swift in Sources */,
+				8C85E8C82BFA843B005B6201 /* RespiratoryGraph.swift in Sources */,
 				8C7435E42BD6DBC200C889A2 /* TextFieldStyle.swift in Sources */,
 				8CBF19FA2BBDECE4001BEBA0 /* Home.swift in Sources */,
 				8C30E92027FE05A70050C677 /* Sleep_TracerApp.swift in Sources */,
@@ -358,7 +366,7 @@
 				DEVELOPMENT_TEAM = 86C8SC428C;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Sleep Tracer/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -381,7 +389,7 @@
 				DEVELOPMENT_TEAM = 86C8SC428C;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Sleep Tracer/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

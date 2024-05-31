@@ -7,12 +7,20 @@
 
 import Foundation
 import HealthKit
+import Observation
 
+
+enum HealthError: Error {
+    case healthDataNotAvilable
+}
+
+@Observable
 // Custom class responsible for any operations related to HKHealthStore
 // A wrapper around CKHealthStore
 class HealthStore {
     // Instance for reading, writing health data
     var healthStore: HKHealthStore?
+    var lastError: Error?
     
     var query: HKStatisticsCollectionQuery?
     
@@ -21,6 +29,8 @@ class HealthStore {
         // check if it is available or  not
         if HKHealthStore.isHealthDataAvailable() {
             healthStore = HKHealthStore()
+        } else {
+            lastError = HealthError.healthDataNotAvilable
         }
     }
     
@@ -67,8 +77,6 @@ class HealthStore {
         healthStore.requestAuthorization(toShare: [], read: [quantityType]) { (success, error) in
             completion(success)
         }
-        
-        
     }
         
     

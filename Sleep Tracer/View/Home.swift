@@ -12,7 +12,8 @@ struct Home: View {
     var body: some View {
         
         Text("Home - Dashboard")
-            .shadow(radius: 20)
+            .font(.largeTitle)
+            .shadow(color: .mint, radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
 
     }
 }

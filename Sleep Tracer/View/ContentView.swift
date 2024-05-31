@@ -40,13 +40,14 @@ struct ContentViewWithTabs: View {
                 .toolbarBackground(.visible, for: .tabBar) // since it's hidden by default
                 .toolbarBackground(Color.black, for: .tabBar) // toolbarBackground is per tabItem, not per TabView
             
-            RespiratoryView()
+            RespiratoryRateView()
                 .tabItem {
                     Label("Resperatory Rate", systemImage: "lungs.fill")
                 }
                 .toolbarBackground(.visible, for: .tabBar)
                 .toolbarBackground(Color.black, for: .tabBar)
-            Text("Tap to Logout")
+
+            Text("Are you sure to logout?\nTap here to Logout")
                 .tabItem {
                     Label("Logout",  systemImage: "square.and.arrow.up")
                 }
@@ -56,11 +57,10 @@ struct ContentViewWithTabs: View {
                     authManager.isLoggedIn = false
                 }
         }
-//        .toolbarColorScheme(.none, for: .tabBar)
         
     }
 }
 
 #Preview {
-    ContentView()
+        ContentView()
 }

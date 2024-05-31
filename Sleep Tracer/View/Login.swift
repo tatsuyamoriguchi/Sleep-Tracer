@@ -21,7 +21,7 @@ struct Login: View {
     var body: some View {
         VStack{
                 HStack {
-                    Image("Sleep Tracer")
+                    Image("Sleep Tracer Title")
                     Spacer()
                     Image("Sleep Tracer Icon Transparent")
                 }

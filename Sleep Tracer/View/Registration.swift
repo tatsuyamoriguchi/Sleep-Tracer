@@ -16,6 +16,7 @@ struct Registration: View {
     
     @Environment(\.presentationMode) var presentationMode
     
+    
     @State private var authManager = AuthenticationManager.shared
     
     var body: some View {
@@ -88,13 +89,6 @@ struct Registration: View {
 }
 
 extension Registration {
-    
-//    func validFormat(emailGiven: String, passwordGiven: String) {
-//        if Validation().isValidEmail(emailGiven) == false {
-//            message = "email is not in valid format."
-//            email = ""
-//        }
-//    }
     
     func registrationAction(emailGiven: String, passwordGiven: String, confirmPasswordGiven: String) {
         let isValid = authManager.register(email: emailGiven, password: passwordGiven, confirmPassword: confirmPasswordGiven)
